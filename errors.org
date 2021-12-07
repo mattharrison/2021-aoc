@@ -1,0 +1,77 @@
+* Day 1
+** Errors
+*** ValueError - Trailing value on input (off by one?) Resolution - Strip data
+*** ValueError - Creating doctest and didn't make raw (find_increase_window)
+*** RuntimeError - Using while loop in window_iter instead of for loop
+*** Pandas read_csv - didn't make names a list
+* Day 2
+** Errors
+*** AttributeError - Tried to call doctest.main (instead of testmod)
+*** Depth is positive (I was treating as negative). Need to flip -
+*** Pandas - read in first line as headers (use names)
+*** Miscalculated pandas aim 
+*** Used np.where instead of np.select
+*** Lambda syntax error used . instead of :
+* Day 3
+** Errors
+*** TypeError used Counter expecting value to be string instead of int
+*** SyntaxError closing paren mismatch
+*** TypeError > with function and list - forgot "key" for max function
+*** Logic error list comprehension not working - change to for loop
+*** SyntaxError closing paren mismatch (complicated key function)
+*** Logic error solved, was using max([0,1] instead of max(['0', '1']
+*** IndentationError copied code but not while loop
+*** Logic error trying to sum where line[bit_pos] == 1 instead of line[bit_pos] == '1' 
+*** Logic error finding least common. Changed logic and tested
+* Day 4
+** Errors
+*** Typo - forgot trailing quote in docstring
+*** Logic - When parsing I didn't split out elements in line
+    boards = [lines[i:i+5] for i in range(2, len(lines), 6)]
+*** Logic - Didn't convert strings to nums in data
+*** Typo - list comp. forgot "for"
+*** Logic - tried to cast list to int instead of items in list
+*** Syntax - while not done:=False: needs parens
+*** Off by n error -    num, *nums = nums exhausting
+*** Syntax error setting conditional breakpoint Correct below: b line, exp
+    b 88, num == 24
+*** Syntax error - tried to use walrus with while loop,     while not (done:=False):
+    Kept setting done to false
+*** Downloaded wrong file... 
+*** Logic error - max_index needed >= instead of >
+*** Logic error - exhausted nums in part2 instead of removing boards when finished
+*** Python error - looping over list (boards) and changing it
+    Solution track finished and filter in loop
+*** Logic error - part two wasn't tracking val
+*** Typo - board_finish_index
+*** Too many solutions need to wait
+*** Part2 works on sample data but not real data
+*** Convert to OO - Easy to work
+* Day 5
+** Errors
+*** Logic error parsing data (forgot ,)
+*** Error Sample got 2 instead of 5 (parsing error split src twice)
+    Copy/paste error - forgot to change part of pasted
+*** Logic error - summing count in values, rather than number of points
+*** Type error - trying to get len of generator
+*** Part2 enum_pts_in_line doesn't handle diagonal
+*** Logic error - Created enum_pts then got 7 points instead of 12 for sample
+    enum_pts countdown was backwards
+*** Logic eror - enum_pts_in_line for diagonal put x,y in one call rather that x1,x2
+* Day 6
+** Errors
+*** Part 1 w/ no issues
+*** Part 2 started to run but I killed it
+*** Incubation! - Track days to counts instead of individual fishes
+*** RuntimeError - Looping over days added 8 and 7 need to seed those with 0
+*** RuntimeError - Also need to seed 0 (and others w/ sample) - use set_default
+*** typo - wrong variable in for loop (could be caught by editor)
+*** typo - setdefaults (could be caught by editor)
+*** Logic error - set next day value with addition rather than replacing
+    Also loop over day nums from 7 to 0
+*** typo - forgot in in range
+*** Logic error - bubbled sum down - increase count from 0 to 8
+*** Logic error - don't mutate dict, make new dict
+*** Logic error - don't mutate dict, forgot to clear out new dict
+*** Typo - Ran part two against sample data not real data
+
