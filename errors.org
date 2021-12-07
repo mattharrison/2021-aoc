@@ -74,4 +74,13 @@
 *** Logic error - don't mutate dict, make new dict
 *** Logic error - don't mutate dict, forgot to clear out new dict
 *** Typo - Ran part two against sample data not real data
+* Day 7
+** Errors
+*** Logic error - didn't calc abs only diff
+*** Part 2 - recursion error (language problem)
+*** Add caching (cache not in 3.8)
+*** Logic error - recursion didn't handle 0. Print to debug. Could test
+** Thoughts
+*** Closed form formula - eliminate recursion
+*** Convert recursion to non-recursive
 

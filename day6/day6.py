@@ -49,14 +49,13 @@ def part2(txt, days=80):
         day_counts.setdefault(i, 0)
     new_dict = {i:0 for i in range(9)}    
     for day in range(days):
-        for fish_age in [1,2,3,4,5, 6, 7 ]:#in range(7, -1, -1):
+        for fish_age in [1,2,3,4,5,6,7]:
             new_dict[fish_age] = day_counts[fish_age+1]
         new_dict[0] = day_counts[1]
         new_dict[8] = day_counts[0]
         new_dict[6] += day_counts[0]
         day_counts = new_dict
         new_dict = {}
-    print(day_counts)
     return day_counts
 
 
