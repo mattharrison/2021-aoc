@@ -1,4 +1,10 @@
+"""
+https://lucblassel.com/posts/advent-of-code"/
+
+"""
+
 import functools
+from statistics import median, mean
 
 SAMPLE = '''16,1,2,0,4,2,7,1,2,14
 '''
@@ -8,8 +14,24 @@ REAL = '''1101,1,29,67,1102,0,1,65,1008,65,35,66,1005,66,28,1,67,65,20,4,0,1001,
 def parse_txt(txt):
     return (int(x) for x in txt.strip().split(','))
 
+def part_1_median(txt):
+    vals = list(parse_txt(txt))
+    med = int(median(vals))
+    return sum(abs(v-med) for v in vals)
+
+def part_2_mean_bork(txt):
+    vals = list(parse_txt(txt))
+    return min(cost(x,v) for x in range(min(vals), max(vals)) for v in vals)
+    vals = list(parse_txt(txt))
+    med = int(mean(vals))
+    return sum(abs(v-med) for v in vals)
+
 def part_1(txt):
     """
+    L1 loss (median)
+    https://twitter.com/drob/status/1468247388238327822
+    * Stats fun fact is that the median minimizes the sum of absolute deviations!
+
     >>> part_1(SAMPLE)
     37
     """
@@ -45,6 +67,7 @@ def fuel_cost(distance):
 
 def cost(src, dst):
     """
+    (n * (n +1)) // 2).
     """
     delta = abs(dst-src)
     #print(delta)
@@ -56,4 +79,6 @@ if __name__ == '__main__':
     doctest.testmod()
     print(part_1(REAL)) # 344535
     print(part_2(SAMPLE)) # 168
-    print(part_2(REAL)) # 344535
+    print(part_2(REAL)) # 95581659
+    print(part_1_median(REAL))
+    print(part_2_mean(REAL))

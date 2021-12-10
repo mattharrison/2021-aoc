@@ -1,3 +1,17 @@
+"""
+https://twitter.com/JesperDramsch/status/1468413943869804551
+from user /u/4HbQ on Reddit
+
+d = input()
+f = [*map(d.count, '012345678')]
+
+for _ in range(256):
+    f = f[1:] + f[:1]
+    f[6] += f[-1]
+
+print(sum(f))
+"""
+
 import collections
 
 SAMPLE = '''3,4,3,1,2

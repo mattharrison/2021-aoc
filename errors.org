@@ -83,4 +83,38 @@
 ** Thoughts
 *** Closed form formula - eliminate recursion
 *** Convert recursion to non-recursive
+* Day 8
+** Errors
+*** split on , instead of \n and |
+*** logic error, hashing on set
+*** typo - patter
+*** logic error - empty result from get_mapping
+    Was parsing all lines instead of single line
+*** logic error - converted keys from sets to strings but left in set logic (<=
+    Convert strings in inverted to sets
+*** Sloppy error - didn't calculate digit 2
+    Added logic
+*** logic error - 0 and 9 broken
+    Order of if statement for 0, 6, 9 wrong
+*** typo - when changing order of if above didn't convert if to elif
+*** Reading issue - Parsed everything but it looks like it is not needed for part 1
+*** Part 2 logic issue - converted list of strings to int
+* Day 9
+** Errors
+*** Logic error - parsing txt - was flattened instead of nested
+*** Logic error - trying to calculate len of int instead of list
+*** Off by one error - Checking with wrong variable x instead of x1
+*** Reading error - didn't read that problem asked for 1 + minimums
+*** Typo - Called method as if it were a function
+*** Logic error - Flipped < (wrong way)
+*** Logic error - When parsing map included new line (didn't call parse)
+*** Typo - called get_basin as if it were a function
+*** Typo - reduce args in wrong order
+*** Logic error - trying to multiple namedtuple instead of value of namedtuple
+*** Logic error - sliced off first 3 instead of last
+* Day 10
+** Errors
+*** Typo - stplit
+*** Part two - change find_illegal_move to return expected as well
+*** Logic error - calculating score in part 2 needed to sort, take middle, and reveerse expected
 
