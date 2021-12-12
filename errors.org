@@ -117,4 +117,53 @@
 *** Typo - stplit
 *** Part two - change find_illegal_move to return expected as well
 *** Logic error - calculating score in part 2 needed to sort, take middle, and reveerse expected
+* Day 11 - Work on gridder
+** Errors
+*** Import Error - test file couldn't see gridder change to grid
+*** Logic Error - around method not working - 
+    Change logic from nested loop to looping over tuples
+*** Logic Error - thinking iter gave rows instead of points
+    change from for row in self to for row in self.rows
+*** Import Error - day11 can't find grids
+*** Typo - += = instead of += 1
+*** Logic Error - Parse returns Grid, trying to stick that into a Grid (again)
+*** Typo - Copy doens't work with a generator (len called in Grid constructor)
+            data.append([p.value] for p in row) instead of data.append([p.value for p in row])
+*** Python issue - Default dataclass is not hashable
+    x: int = field(hash=True)
+    @dataclass(unsafe_hash=True)
+*** Logic error - Hashing dataclass was broken needed
+    
+@dataclass(unsafe_hash=True)
+class Point:
+    x: int
+    #x: int = field(hash=True)
+    #y: int = field(hash=True)
+    y: int
+    value: object= field(hash=False)
+    #value: object
+
+*** Typo - Forgot )
+
+*** Typo - part1_self
+*** Logic - returned tuple of (grid, flashed) instead of just flashed but
+    updated wrong call.
+*** API error - part1 accepts txt not a grid
+*** Type - Used BASIC instead of SAMPLe
+*** Off by one - Part 2 real error - 381 too low - off by one error 382!
+    Change range(1000) to range(1,1000)
+** Adapt day 4 to use grid
+*** Typo -  Grids instead of Grid
+*** Syntax - Calling a list ie:  for row in grid.rows():
+*** Logic - Forgot to add point_class to Grid call
+*** Typo - cols() instead of columns()
+*** Syntax - Grid.columns - index with self.rows[x, y] instead of self.rows[y][x]
+*** Logic - Forgot to initialize done variable
+** Part 2 subclass Grid
+*** Typo - lines -> txt
+*** Typo - BingoBoards (plural)
+*** Logic Error - added grid_class parameter to signature but didn't use
+*** Typo - refactoring to solved method (didn't change grid to self)
+*** Typo - finish_round instead of finish_num
+*** Typo or Logic - used min instead of max
 
