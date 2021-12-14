@@ -166,4 +166,56 @@ class Point:
 *** Typo - refactoring to solved method (didn't change grid to self)
 *** Typo - finish_round instead of finish_num
 *** Typo or Logic - used min instead of max
+* Day 12 -
+** Errors
+*** Typo - traceback instead of breakpoint
+*** Typo - setdefault not providing value
+*** API - calling .append with two parameters
+*** Typo - nodes instead of self.nodes
+*** Typo - changed children to others (but forgot some)
+*** Logic error - Adding duplicate nodes in .add_nodes
+*** Typo - df_visit forgot self.df_visit
+*** Logic error - df_cormen not working - called return from recursive call
+*** Typo - other -> others
+*** Typo - Implment BFS from cormen - forgot to initialize
+*** Typo - other -> others
+*** Typo - txt -> SAMPLE in doctest
+*** Typo - didn't add paths to recursive call to search_children
+*** API - set list to result of .append!
+*** Part 2
+*** Typo -Added string .replace and forgot .
+*** API -  needed .value in Counter
+*** Typo - In part 2 forgot to call part 2 in recursive call
+*** Logic - Forgot to handle start in part 2
+*** Spent a lot of time on BFS DFS before implementing my own...
+* Day 13
+** Errors
+*** Syntax - need parens around tuple in list comp
+*** Typo - doctest.main
+*** Logic - forgot double nesting on list comp
+*** Logic - forgot to split on '\n'
+*** Typo - used txt instead of pts in list comp
+*** Logic (Sleepy) - used for x,y in line.split() instead of         x,y = line.split(',') 
+*** Typo - grids instead of grid
+*** Logic - getting max of (x,y) key in dictionary
+    forgot key= !?!
+*** Logic - Forgot to parse folds and split by \n again
+*** Logic - calculated swap by max_x//2 - (x - max_x//2) instead of
+    amount - (x-amount)
+*** Reading - Anwser too high - Did all folds for part one instead
+    of just one
+*** Part 2 - Range error - swapped matrix[x][y] should be matrix[y][x]
+    Also calculated max value but used range(max) instead of range(max+1)
+*** Sloppy - Copying part1 to part2 didn't remove fold limit
+*** Logic - Needed to recalculate max_x/y for each fold against new grid
+* Day 14
+** Typo - doctest txt instead of SAMPLE
+** API - tried to do 
+** Typo - Used Collection instead of instance for pairs.keys()
+** API - Mutated pairs while looping over
+** Logic - Create new count dictionary while looping over
+** Typo - Changed signature of part1 but didn't update returns
+** Typo - used pairs(pair) instead of pairs[pair]
+** Logic - Need to track letter counts while iterating not calculating at end
+** Logic - Counting letter counts only need to add new letter (to_insert)
 
