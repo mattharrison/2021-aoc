@@ -218,4 +218,52 @@ class Point:
 ** Typo - used pairs(pair) instead of pairs[pair]
 ** Logic - Need to track letter counts while iterating not calculating at end
 ** Logic - Counting letter counts only need to add new letter (to_insert)
+* Day 15
+** Errors
+*** Used typing with emacs - no typos
+*** Thought about simulated annealing, made some code
+*** Decided to use a-star instead copied algo from wikipedia
+*** Import - copied Grid over (to get completion), forgot to import field
+*** Logic - Got no path parsing bad, called line.split (no need to split)
+*** Typo - Adding debug printing for path forgot quotes around '*' 
+*** Logic -  Adding debug printing for path set point to '*' instead of .value
+    Typing finds this! (if you have types which I didn't for Grid.rows)
+*** Logic - reconstruct_path - forgot to add initial point
+*** Typo - calculating sum with gen exp. Used value instead of pt
+*** Logic - calculating sum with gen exp. Took sum of each value instead of sum of all values
+    (got generator instead of value)
+*** Logic/Reading - calculating sum included initial point
+*** API - for row in rows instead of for row in range(rows)
+*** Off by one error - need to make it 5 times as big (repeat 4 times) not 5
+*** Out of bounds - creating repeat_loop
+    pulling out of vals instead of result
+*** Typo - didn't change len_rows
+*** Typo - didn't return new_rows
+* Day 16
+** Errors - Used pyright
+*** Forgot - Forgot to add value as member of LiteralPacket
+    add line self.value = value
+    Dataclass would solve this
+*** Off by one - needed data = binstr[pos+1:pos+5] instead of
+            data = binstr[pos+1:pos+4]
+*** Forgot to update length from pos to length in call to constructor
+*** Doctest - trailing whitespace (editor flagged)
+*** Logic Error - with OPERATOR1 trying to parse sub OperatorPacket (and there are not any)
+*** Adding pytest - 
+*** Typo - day16.frombin instead of day16.OperatorPacket.frombin
+*** Added debug to frombin because version parsing failing
+    This is because hex2bin is truncating left 0
+*** Indentation error - stubbed out partial function and then started working on another function
+*** Logic error - calculating ceiling_8
+*** Typo - test = instead of ==
+*** Sloppy - added subpacket_size to parameter but not instance
+    Editor warns that it wasn't used
+*** Logic error - parse_subpackets need to know when done.
+*** Logic length parsing failed - going to add raw binary data
+    Wasn't error, typo in test. pulled out p.subpackets[0] instead of p.subpackets[1]
+*** Sloppy - forgot to add length to OperatorPacket
+*** Sloppy - get_version_sum didn't add method to Literal
+*** Typo - pytest parametrize used 'hexstr res' instead of 'hexstr, res'
+*** Typo - pytest parameters, single list of tuples, not lists
+*** Logic - part 2 trying to compare packets use total ordering
 
